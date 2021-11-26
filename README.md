@@ -5,7 +5,7 @@
 西安电子科技大学校园睿思论坛Android客户端。    
 支持夜间模式，支持主题，如有bug，或者新功能建议欢迎提出Issue .
 
-iOS版见[Ruisi_Ios](https://github.com/freedom10086/Ruisi_Ios)
+iOS版见[Ruisi_iOS](https://github.com/xidian-rs/Ruisi_iOS)
 
 ### Discuz设置
 1. 到你discuz管理后台`全局` -> `手机版设置` -> `开启手机版` ，目前不支持新触屏版，关闭此选项
