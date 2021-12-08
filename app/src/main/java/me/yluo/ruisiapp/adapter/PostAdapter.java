@@ -24,6 +24,7 @@ import me.yluo.ruisiapp.listener.ListItemClickListener;
 import me.yluo.ruisiapp.model.SingleArticleData;
 import me.yluo.ruisiapp.model.SingleType;
 import me.yluo.ruisiapp.utils.DimenUtils;
+import me.yluo.ruisiapp.utils.KeyboardUtil;
 import me.yluo.ruisiapp.utils.UrlUtils;
 import me.yluo.ruisiapp.widget.CircleImageView;
 import me.yluo.ruisiapp.widget.htmlview.HtmlView;
@@ -163,6 +164,8 @@ public class PostAdapter extends BaseAdapter {
 
                 return true;
             });
+
+            comment.setOnClickListener(this);
 
             avatar.setOnClickListener(v -> {
                 if (datalist.get(getAdapterPosition()).uid > 0) {

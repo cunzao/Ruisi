@@ -412,6 +412,7 @@ public class PostActivity extends BaseActivity
     @Override
     public void onListItemClick(View v, final int position) {
         switch (v.getId()) {
+            case R.id.html_text:
             case R.id.btn_reply_cz:
                 if (isLogin()) {
                     SingleArticleData single = datas.get(position);
