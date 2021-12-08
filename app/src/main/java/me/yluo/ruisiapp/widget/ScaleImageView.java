@@ -17,10 +17,15 @@ public class ScaleImageView extends ImageView {
     private static final int ZOOM = 2;//放大
     private float startDis = 0;
     private PointF midPoint;//中心点
-
+    private CloseInterface closeInterface = null;
 
     public ScaleImageView(Context context) {
         super(context);
+    }
+
+    public ScaleImageView(Context context, CloseInterface closeInterface) {
+        super(context);
+        this.closeInterface = closeInterface;
     }
 
     /**
@@ -58,7 +63,17 @@ public class ScaleImageView extends ImageView {
                 break;
 
             case MotionEvent.ACTION_UP:
-                mode = 0;
+                // 如果点击之后没有移动
+                // 则关闭此图片窗口
+                float dx = event.getX() - startPoint.x;//x轴移动距离
+                float dy = event.getY() - startPoint.y;
+                if (mode == DRAG && dx <= 10f && dy <= 10f) {
+                    if (closeInterface != null) {
+                        closeInterface.close();
+                    }
+                } else {
+                    mode = 0;
+                }
                 break;
             //有手指离开屏幕，但屏幕还有触点(手指)
             case MotionEvent.ACTION_POINTER_UP:
@@ -73,7 +88,6 @@ public class ScaleImageView extends ImageView {
                     midPoint = mid(event);
                     currentMaritx.set(this.getImageMatrix());//记录当前的缩放倍数
                 }
-
                 break;
             default:
                 break;
@@ -100,5 +114,9 @@ public class ScaleImageView extends ImageView {
         float midy = event.getY(1) + event.getY(0);
 
         return new PointF(midx / 2, midy / 2);
+    }
+
+    public interface CloseInterface {
+        void close();
     }
 }

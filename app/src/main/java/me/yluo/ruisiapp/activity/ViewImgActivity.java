@@ -195,7 +195,13 @@ public class ViewImgActivity extends BaseActivity implements ViewPager.OnPageCha
         public Object instantiateItem(@NonNull ViewGroup container, final int position) {
             ScaleImageView v = container.findViewWithTag(position);
             if (v == null) {
-                v = new ScaleImageView(ViewImgActivity.this);
+                ScaleImageView.CloseInterface closeInterface = new ScaleImageView.CloseInterface() {
+                    @Override
+                    public void close() {
+                        ViewImgActivity.this.finish();
+                    }
+                };
+                v = new ScaleImageView(ViewImgActivity.this, closeInterface);
                 v.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                 ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
