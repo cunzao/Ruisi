@@ -42,8 +42,8 @@ public class App extends Application {
         // 自定义外网睿思服务器地址
         String customOutServerAddr = shp.getString("setting_rs_out_server_addr", App.BASE_URL_RS).trim();
         if (customOutServerAddr.length() > 0) {
-            if (!customOutServerAddr.startsWith("http://")) {
-                customOutServerAddr = "http://" + customOutServerAddr;
+            if (!customOutServerAddr.startsWith("https://")) {
+                customOutServerAddr = "https://" + customOutServerAddr;
             }
 
             if (!customOutServerAddr.endsWith("/")) {
@@ -97,7 +97,7 @@ public class App extends Application {
     public static final String POST_TID = "805203";
 
     //论坛基地址2个地址 第一个校园玩才能访问，第二个都可以
-    public static String BASE_URL_RS = "http://rs.xidian.edu.cn/";
+    public static String BASE_URL_RS = "https://rs.xidian.edu.cn/";
 
     //是否为校园网
     public static boolean IS_SCHOOL_NET = false;
