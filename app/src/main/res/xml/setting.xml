@@ -38,7 +38,7 @@
             android:title="启用小尾巴" />
 
         <EditTextPreference
-            android:defaultValue="[size=1][color=Gray]-----来自[url=http://rs.xidian.edu.cn/forum.php?mod=viewthread&amp;tid=805203]手机睿思[/url][/color][/size]"
+            android:defaultValue="[size=1][color=Gray]-----来自[url=https://rs.xidian.edu.cn/forum.php?mod=viewthread&amp;tid=805203]手机睿思[/url][/color][/size]"
             android:inputType="text"
             android:key="setting_user_tail"
             android:maxLines="3"
