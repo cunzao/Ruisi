@@ -99,6 +99,9 @@ public class App extends Application {
     //论坛基地址2个地址 第一个校园玩才能访问，第二个都可以
     public static String BASE_URL_RS = "https://rs.xidian.edu.cn/";
 
+    //论坛部分独立 API 地址
+    public static String BASE_API_URL_RS = "https://rs-api.xidian.edu.cn/";
+
     //是否为校园网
     public static boolean IS_SCHOOL_NET = false;
 
