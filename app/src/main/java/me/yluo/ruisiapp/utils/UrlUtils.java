@@ -63,7 +63,7 @@ public class UrlUtils {
         if (urlUid.contains("uid")) {
             uid = GetId.getId("uid=", urlUid);
         }
-        return App.getBaseUrl() + "ucenter/avatar.php?uid=" + uid + "&size=small";
+        return App.getBaseApiUrl() + "ucenter/avatar.php?uid=" + uid + "&size=small";
     }
 
     public static String getAvaterurlm(String urlUid) {
@@ -71,7 +71,7 @@ public class UrlUtils {
         if (urlUid.contains("uid")) {
             uid = GetId.getId("uid=", urlUid);
         }
-        return App.getBaseUrl() + "ucenter/avatar.php?uid=" + uid + "&size=middle";
+        return App.getBaseApiUrl() + "ucenter/avatar.php?uid=" + uid + "&size=middle";
     }
 
     public static String getAvaterurlb(String urlUid) {
@@ -79,7 +79,7 @@ public class UrlUtils {
         if (urlUid.contains("uid")) {
             uid = GetId.getId("uid=", urlUid);
         }
-        return App.getBaseUrl() + "ucenter/avatar.php?uid=" + uid + "&size=big";
+        return App.getBaseApiUrl() + "ucenter/avatar.php?uid=" + uid + "&size=big";
     }
 
     public static String getSignUrl() {

@@ -93,6 +93,7 @@ public class FragmentMy extends BaseLazyFragment implements View.OnClickListener
         }
         listView.setOnItemClickListener(this);
         listView.setAdapter(new SimpleAdapter(getActivity(), fs, R.layout.item_function, new String[]{"icon", "title"}, new int[]{R.id.icon, R.id.title}));
+        refreshAvatarView();
         return mRootView;
     }
 
