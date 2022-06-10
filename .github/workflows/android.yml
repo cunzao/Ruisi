@@ -51,7 +51,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: app/build/outputs/apk/release/app-release.apk
+        asset_path: app/build/outputs/apk/release/app-release-unsigned.apk
         asset_name: LightTimetable-${{steps.get-version.outputs.value}}.apk
         asset_content_type: application/vnd.android.package-archiv
 
@@ -59,4 +59,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build
-        path: app/build/outputs 
+        path: app/build/outputs
