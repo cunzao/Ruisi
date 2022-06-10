@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ release ]
   pull_request:
-    branches: [ master ]
+    branches: [ release ]
 
 jobs:
   build:
@@ -52,7 +52,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: app/build/outputs/apk/release/app-release-unsigned.apk
-        asset_name: LightTimetable-${{steps.get-version.outputs.value}}.apk
+        asset_name: Ruisi-${{steps.version.outputs.value}}.apk
         asset_content_type: application/vnd.android.package-archiv
 
     - name: Archive production artifacts
