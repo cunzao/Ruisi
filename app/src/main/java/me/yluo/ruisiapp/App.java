@@ -101,9 +101,6 @@ public class App extends Application {
     // 论坛更新后，头像接口更换了，因此引入api地址
     public static String BASE_API_URL_RS = "https://rs-api.xidian.edu.cn/";
 
-    //论坛部分独立 API 地址
-    public static String BASE_API_URL_RS = "https://rs-api.xidian.edu.cn/";
-
     //是否为校园网
     public static boolean IS_SCHOOL_NET = false;
 
